@@ -1,0 +1,11 @@
+<h4>Login Notices</h4>
+
+<%= @message %>
+
+<% if session[:user_id] %>
+  Bienvenido, <strong><%= current_user.name %></strong>.<br>
+  <a href='/welcome'>Para entrar a la aplicación pulsa aqui</a>.<br>
+<% else %>
+ <br>
+ <a href='/'> Regresar al inicio </a> 
+<% end %>
